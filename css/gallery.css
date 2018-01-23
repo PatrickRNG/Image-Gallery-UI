@@ -1,0 +1,25 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 20px;
+    padding: 0;
+    background: #333;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    border: #fff solid 3px;
+    background: #fff;
+}
+
+.main-img img, .images img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
