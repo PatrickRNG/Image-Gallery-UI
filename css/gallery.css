@@ -1,33 +1,71 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
-    margin: 20px;
-    padding: 0;
-    background: #333;
+    width: 100%;
+    margin: 0;
+    vertical-align: top;
+    height: 100vh;
+    padding: 20px;
+    background: #1b1b1b;
+    overflow: hidden;
+}
+
+#bgi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    filter: blur(30px) grayscale(65%);
 }
 
 .container {
-    width: 500px;
+    width: 100%;
     margin: auto;
-    border: #fff solid 3px;
-    background: #fff;
+    overflow: visible;
+    display: block;
 }
 
-.main-img img, .images img {
+.wrapper {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.main-img {
+    margin: 0 auto;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+
+.main-img img,
+.images img {
     width: 100%;
     overflow: hidden;
+    margin-top: 10px;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+.main-img img:hover,
+.images img:hover {
+    box-shadow: 1px 1px 20px #000000;
 }
 
 .images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
+    grid-gap: 20px;
+    transition: .2s ease-in-out;
+    overflow: hidden;
 }
 
 /* Fade Animation */
 
 @keyframes fadeIn {
-    to  {
+    to {
         opacity: 1;
     }
 }
